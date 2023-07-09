@@ -24,7 +24,7 @@ namespace SFdb.Controllers
 
         [HttpGet]
         [Route("{id:guid}")]
-        public async Task<IActionResult> GetCharacter([FromRoute] Guid id)
+        public async Task<IActionResult> GetCharacter([FromRoute] String id)
         {
             var character = await dbContext.Characters.FindAsync(id);
 
@@ -42,7 +42,7 @@ namespace SFdb.Controllers
         {
             var character = new Character()
             {
-                Id = Guid.NewGuid(),
+                Id = Guid.NewGuid().ToString(),
                 Name = addCharacterRequest.Name
             };
 

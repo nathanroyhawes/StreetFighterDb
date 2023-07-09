@@ -20,7 +20,8 @@ namespace SFdb
             // in memory database
             //builder.Services.AddDbContext<CharacterAPIDbContext>(options => options.UseInMemoryDatabase("CharacterDb"));
 
-            builder.Services.AddDbContext<CharacterAPIDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+            var connectionstring = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddDbContext<CharacterAPIDbContext>();
 
             var app = builder.Build();
 

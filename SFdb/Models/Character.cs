@@ -1,11 +1,13 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 
 namespace SFdb.Models
 {
     public class Character
     {
         // defining character
-        public Guid Id { get; set; }
+        [Key]
+        public String Id { get; set; }
         public string Name { get; set; }
     }
 }

@@ -10,10 +10,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.8",
           "Microsoft.EntityFrameworkCore.Design": "7.0.8",
-          "Microsoft.EntityFrameworkCore.InMemory": "7.0.8",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.8",
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "7.0.8",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.8",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -77,17 +74,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.InMemory/7.0.8": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.8"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
-            "assemblyVersion": "7.0.8.0",
-            "fileVersion": "7.0.823.31802"
-          }
-        }
-      },
       "Microsoft.EntityFrameworkCore.Relational/7.0.8": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.8",
@@ -117,11 +103,6 @@
             "assemblyVersion": "7.0.8.0",
             "fileVersion": "7.0.823.31802"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/7.0.8": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "7.0.8"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -539,13 +520,6 @@
       "path": "microsoft.entityframeworkcore.design/7.0.8",
       "hashPath": "microsoft.entityframeworkcore.design.7.0.8.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.InMemory/7.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-FGJsIls82+tj7ZrbyiwBiVtEHp1quOE4PGflLR090beptkHK02yLrGoF72ZA045rYd9NR8EMoOk+pqgAafdbDw==",
-      "path": "microsoft.entityframeworkcore.inmemory/7.0.8",
-      "hashPath": "microsoft.entityframeworkcore.inmemory.7.0.8.nupkg.sha512"
-    },
     "Microsoft.EntityFrameworkCore.Relational/7.0.8": {
       "type": "package",
       "serviceable": true,
@@ -566,13 +540,6 @@
       "sha512": "sha512-laT4uPy6RZWZm7CS2J3o1IOfffZLOnJG5pJTHW3t1E3y9up8vGaDZoKbZFYDPGRN/ZEl8lsOKZFcgPE0EXPmkw==",
       "path": "microsoft.entityframeworkcore.sqlite.core/7.0.8",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.7.0.8.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/7.0.8": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-98zo4OdBnPXYVD+Fl+a5ofsVLokd9hsp9W1D+VeuIowG0Cbxr2gQ9PqCIqOXxafl5ykKlbO+Bmn7lLRclMOq4Q==",
-      "path": "microsoft.entityframeworkcore.tools/7.0.8",
-      "hashPath": "microsoft.entityframeworkcore.tools.7.0.8.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
