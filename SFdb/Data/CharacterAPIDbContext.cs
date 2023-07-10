@@ -5,7 +5,7 @@ namespace SFdb.Data;
 public class CharacterAPIDbContext : DbContext
 {
     public DbSet<Models.Character> Characters { get; set; }
-    //public DbSet<Models.Moves> Moves { get; set; }
+    public DbSet<Models.Moves> Moves { get; set; }
 
 
     public CharacterAPIDbContext() : base()
@@ -17,7 +17,7 @@ public class CharacterAPIDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Models.Character>().ToTable("Characters");
-        //modelBuilder.Entity<Models.Moves>().ToTable("Moves");
+        modelBuilder.Entity<Models.Moves>().ToTable("Moves");
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

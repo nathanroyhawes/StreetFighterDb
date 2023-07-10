@@ -70,7 +70,7 @@ namespace SFdb.Controllers
         // remove characters
         [HttpDelete]
         [Route("{id:guid}")]
-        public async Task<IActionResult> DeleteCharacter([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteCharacter([FromRoute] String id)
         {
             var character = await dbContext.Characters.FindAsync(id);
 
