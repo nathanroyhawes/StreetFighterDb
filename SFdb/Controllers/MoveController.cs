@@ -24,7 +24,7 @@ namespace SFdb.Controllers
         }
 
         [HttpGet]
-        [Route("{id:guid}")]
+        [Route("{moveId:guid}")]
         public async Task<IActionResult> GetMove([FromRoute] String moveId)
         {
             var move = await dbContext.Moves.FindAsync(moveId);
@@ -55,14 +55,16 @@ namespace SFdb.Controllers
             return Ok(move);
         }
         [HttpPut]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> UpdateMove([FromRoute] Guid moveId, UpdateMoveRequest updateMoveRequest)
+        [Route("{moveId:guid}")]
+        public async Task<IActionResult> UpdateMove([FromRoute] String moveId, UpdateMoveRequest updateMoveRequest)
         {
-            var move = await dbContext.Characters.FindAsync(moveId);
+            var move = await dbContext.Moves.FindAsync(moveId);
 
             if (move != null)
             {
-                move.Name = updateMoveRequest.moveName;
+                move.charId = updateMoveRequest.charId;
+                move.moveName = updateMoveRequest.moveName;
+                move.moveNotation = updateMoveRequest.moveNotation;
 
                 await dbContext.SaveChangesAsync();
                 return Ok(move);
@@ -72,8 +74,8 @@ namespace SFdb.Controllers
         }
         // remove characters
         [HttpDelete]
-        [Route("{id:guid}")]
-        public async Task<IActionResult> DeleteMove([FromRoute] Guid moveId)
+        [Route("{moveId:guid}")]
+        public async Task<IActionResult> DeleteMove([FromRoute] String moveId)
         {
             var move = await dbContext.Moves.FindAsync(moveId);
 
@@ -82,7 +84,7 @@ namespace SFdb.Controllers
                 dbContext.Remove(move);
                 await dbContext.SaveChangesAsync();
 
-                return Ok(move);
+                return Ok("Deleted" + move);
             }
             return NotFound();
         }

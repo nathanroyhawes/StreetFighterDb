@@ -53,7 +53,7 @@ namespace SFdb.Controllers
         }
         [HttpPut]
         [Route("{id:guid}")]
-        public async Task<IActionResult> UpdateCharacter([FromRoute] Guid id, UpdateCharacterRequest updateCharacterRequest)
+        public async Task<IActionResult> UpdateCharacter([FromRoute] String id, UpdateCharacterRequest updateCharacterRequest)
         {
             var character = await dbContext.Characters.FindAsync(id);
 
