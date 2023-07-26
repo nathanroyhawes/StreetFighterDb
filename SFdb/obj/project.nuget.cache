@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Y34ij93XmFAjSBBaTVEeuM/QKvqxwKBjdbzIstkbyoD6pcMG2LQ0gOlSF/jnXL+mpicsiUKWP1B8+pFBEAzZxg==",
+  "dgSpecHash": "TQ9hwAO2PUY/GRwD87CWFL79HFIuGigptSRTJAXfXjz7f2nv0LR8tr/0Rk+VMOrqMnd8X7tam9Dwc2+eCzxEjQ==",
   "success": true,
   "projectFilePath": "X:\\Programming\\SD2-FinalProject\\SFdbApp\\SFdb\\SFdb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Nate\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.8\\microsoft.data.sqlite.core.7.0.8.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.8\\microsoft.entityframeworkcore.7.0.8.nupkg.sha512",
@@ -35,6 +36,7 @@
     "C:\\Users\\Nate\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
+    "C:\\Users\\Nate\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Nate\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",

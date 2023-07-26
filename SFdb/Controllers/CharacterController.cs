@@ -5,6 +5,7 @@ using SFdb.Models;
 
 namespace SFdb.Controllers
 {
+    //Each Get, Post, Put, and Delete is Asynchronous 
     [ApiController]
     [Route("api/[controller]List")]
     public class CharacterController : Controller
@@ -14,14 +15,14 @@ namespace SFdb.Controllers
         {
             this.dbContext = dbContext;
         }
-
+        // Reads all characters
         [HttpGet]
         public async Task<IActionResult> GetCharacters()
         {
             return Ok(await dbContext.Characters.ToListAsync());
  
         }
-
+        //Reads one specific character
         [HttpGet]
         [Route("{id:guid}")]
         public async Task<IActionResult> GetCharacter([FromRoute] String id)
@@ -36,7 +37,7 @@ namespace SFdb.Controllers
             return Ok(character);
         }
 
-        // add characters
+        // Creates a character
         [HttpPost]
         public async Task<IActionResult> AddCharacter(AddCharacterRequest addCharacterRequest)
         {
@@ -51,6 +52,9 @@ namespace SFdb.Controllers
 
             return Ok(character);
         }
+
+        //Updates Characters
+        //SOLID: Open/Closed - Allows us to change the character entry without altering the 'Character' Class
         [HttpPut]
         [Route("{id:guid}")]
         public async Task<IActionResult> UpdateCharacter([FromRoute] String id, UpdateCharacterRequest updateCharacterRequest)
@@ -67,7 +71,7 @@ namespace SFdb.Controllers
 
             return NotFound();
         }
-        // remove characters
+        //Deletes a Character
         [HttpDelete]
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteCharacter([FromRoute] String id)

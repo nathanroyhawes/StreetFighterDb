@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SFdb.Data;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SFdb
 {
@@ -16,10 +17,7 @@ namespace SFdb
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-
-            // in memory database
-            //builder.Services.AddDbContext<CharacterAPIDbContext>(options => options.UseInMemoryDatabase("CharacterDb"));
-
+            // Creates connection to .db file
             var connectionstring = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<CharacterAPIDbContext>(); 
 
@@ -39,7 +37,25 @@ namespace SFdb
 
             app.MapControllers();
 
+            
+            //Creates Get for SQL Query
+            app.MapGet("/AllRecords", (CharacterAPIDbContext _ctx) =>
+            {
+                //Queries DataBase by using RAW SQL - Joins Characters & Moves Table together and hides GUID information from user
+                String query = "SELECT Characters.Name, Moves.moveName, Moves.moveNotation\r\nFROM Characters, Moves\r\nWHERE Characters.Id = Moves.charId;";
+                List<Models.AllRecord> allRecords = _ctx.AllRecords
+                                             .FromSqlRaw(query)
+                                             .ToList();
+
+                return Results.Ok(allRecords);
+            });
+
             app.Run();
+
+
         }
+        
     }
+ 
+
 }

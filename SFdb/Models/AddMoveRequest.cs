@@ -1,5 +1,6 @@
 ﻿namespace SFdb.Models
 {
+    //Single Responsibility - This class is used specifically to create a new move
     public class AddMoveRequest
     {
         public String charId { get; set; }

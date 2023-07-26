@@ -78,3 +78,5 @@ X:\Programming\SD2-FinalProject\SFdbApp\SFdb\obj\Debug\net6.0\staticwebassets\ms
 X:\Programming\SD2-FinalProject\SFdbApp\SFdb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.SFdb.props
 X:\Programming\SD2-FinalProject\SFdbApp\SFdb\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.SFdb.props
 X:\Programming\SD2-FinalProject\SFdbApp\SFdb\obj\Debug\net6.0\staticwebassets.pack.json
+X:\Programming\SD2-FinalProject\SFdbApp\SFdb\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+X:\Programming\SD2-FinalProject\SFdbApp\SFdb\bin\Debug\net6.0\System.IO.Packaging.dll
