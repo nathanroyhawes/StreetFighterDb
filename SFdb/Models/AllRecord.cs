@@ -8,8 +8,6 @@ namespace SFdb.Models
     [Keyless]
     public class AllRecord
     {
-        
-        
         public string Name { get; set; }
         public string MoveName { get; set; }
         public string MoveNotation { get; set; }  

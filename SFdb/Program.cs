@@ -39,15 +39,13 @@ namespace SFdb
 
             
             //Creates Get for SQL Query
-            app.MapGet("/AllRecords", (CharacterAPIDbContext _ctx) =>
+            app.MapGet("/AllRecords", async (CharacterAPIDbContext _ctx) =>
             {
-                //Queries DataBase by using RAW SQL - Joins Characters & Moves Table together and hides GUID information from user
+                //Queries DataBase by using RAW SQL - Joins Characters & Moves Tables together and hides GUID information from user
                 String query = "SELECT Characters.Name, Moves.moveName, Moves.moveNotation\r\nFROM Characters, Moves\r\nWHERE Characters.Id = Moves.charId;";
-                List<Models.AllRecord> allRecords = _ctx.AllRecords
+                return Results.Ok(_ctx.AllRecords
                                              .FromSqlRaw(query)
-                                             .ToList();
-
-                return Results.Ok(allRecords);
+                                             .ToListAsync());
             });
 
             app.Run();
